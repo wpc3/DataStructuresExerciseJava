@@ -1,35 +1,43 @@
 package rocks.zipcode;
 
-public class ZQueueImpl<E> implements ZQueue<E>{
+import java.util.ArrayDeque;
 
+public class ZQueueImpl<E> implements ZQueue<E>{
+    ArrayDeque<E> aq = new ArrayDeque<>();
     @Override
     public boolean isEmpty() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+//        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+       return aq.isEmpty();
     }
 
     @Override
     public int size() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'size'");
+//        throw new UnsupportedOperationException("Unimplemented method 'size'");
+        return aq.size();
     }
 
     @Override
     public void enqueue(E element) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'enqueue'");
+//        throw new UnsupportedOperationException("Unimplemented method 'enqueue'");
+        aq.offer(element);
+
     }
 
     @Override
     public E dequeue() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'dequeue'");
+//        throw new UnsupportedOperationException("Unimplemented method 'dequeue'");
+        return aq.remove();
     }
 
     @Override
     public E peek() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'peek'");
+//        throw new UnsupportedOperationException("Unimplemented method 'peek'");
+        return aq.peek();
     }
 
 }
